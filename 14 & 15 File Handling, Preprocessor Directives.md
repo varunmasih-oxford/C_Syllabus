@@ -1,43 +1,88 @@
 # 14_File_Handling.md
 
-## File Handling in C
+# File Handling in C
 
-File handling allows programs to store data permanently in files instead of only in RAM.
+File handling allows programs to **store data permanently in files** instead of keeping it only in RAM.
 
-### Common File Operations
+Files help in:
 
-| Operation          | Function           |
-| ------------------ | ------------------ |
-| Create / Open File | fopen()            |
-| Read from File     | fscanf(), fgets()  |
-| Write to File      | fprintf(), fputs() |
-| Close File         | fclose()           |
+* Saving program output
+* Storing large datasets
+* Reading previously stored information
 
 ---
 
-## Opening or Creating a File
+# File Pointer
 
-Syntax
+A **file pointer** is used to access and manipulate files.
+
+```c
+FILE *fp;
+```
+
+`FILE` is a structure defined in the C Standard Library (`stdio.h`).
+
+The pointer `fp` will store the **reference to the opened file**.
+
+---
+
+# Common File Operations
+
+| Operation          | Function               |
+| ------------------ | ---------------------- |
+| Create / Open File | `fopen()`              |
+| Read from File     | `fscanf()`, `fgets()`  |
+| Write to File      | `fprintf()`, `fputs()` |
+| Close File         | `fclose()`             |
+
+---
+
+# Opening or Creating a File
+
+### Syntax
 
 ```c
 FILE *fp;
 fp = fopen("data.txt", "w");
 ```
 
-### File Modes
+---
 
-| Mode | Description                            |
-| ---- | -------------------------------------- |
-| r    | Read file                              |
-| w    | Write file (creates new or overwrites) |
-| a    | Append data                            |
-| r+   | Read and write                         |
-| w+   | Read and write (overwrite)             |
-| a+   | Read and append                        |
+# File Modes
+
+| Mode | Description                                          |
+| ---- | ---------------------------------------------------- |
+| r    | Read file                                            |
+| w    | Write file (creates new or overwrites existing file) |
+| a    | Append data to existing file                         |
+| r+   | Read and write                                       |
+| w+   | Read and write (overwrite file)                      |
+| a+   | Read and append                                      |
 
 ---
 
-## Writing to a File
+# Creating a File
+
+```c
+#include <stdio.h>
+
+int main() {
+
+    FILE *fp;
+
+    fp = fopen("data.txt", "w");
+
+    fclose(fp);
+
+    return 0;
+}
+```
+
+If the file does not exist, it will be **created automatically**.
+
+---
+
+# Writing to a File
 
 ```c
 #include <stdio.h>
@@ -57,9 +102,23 @@ int main() {
 }
 ```
 
+`fprintf()` works similar to `printf()` but writes data **into a file**.
+
 ---
 
-## Reading from a File
+# Appending Data to a File
+
+Append mode adds data **without deleting existing content**.
+
+```c
+fp = fopen("data.txt", "a");
+fprintf(fp, "\nWelcome again!");
+fclose(fp);
+```
+
+---
+
+# Reading from a File (Single Line)
 
 ```c
 #include <stdio.h>
@@ -81,39 +140,111 @@ int main() {
 }
 ```
 
+`fgets()` reads **one line at a time**.
+
 ---
 
-## Closing a File
+# Reading All Lines from a File
+
+To read the entire file we use a loop.
+
+```c
+char text[100];
+
+fp = fopen("data.txt", "r");
+
+while (fgets(text, 100, fp) != NULL) {
+    printf("%s", text);
+}
+
+fclose(fp);
+```
+
+Explanation:
+
+* `fgets()` reads one line
+* When **End Of File (EOF)** is reached, it returns `NULL`
+* The loop stops automatically
+
+---
+
+# Another Way to Read Using a Variable
+
+```c
+char text[100];
+char *data;
+
+fp = fopen("data.txt", "r");
+
+data = fgets(text, 100, fp);
+
+while (data != NULL) {
+    printf("%s", text);
+    data = fgets(text, 100, fp);
+}
+
+fclose(fp);
+```
+
+Here:
+
+* `fgets()` returns a **pointer to the string**
+* When file ends, it returns **NULL**
+
+---
+
+# Checking if File Opened Successfully
+
+Always check if the file opened correctly.
+
+```c
+fp = fopen("data.txt", "r");
+
+if (fp == NULL) {
+    printf("File cannot be opened");
+    return 1;
+}
+```
+
+This prevents program crashes.
+
+---
+
+# Closing a File
 
 ```c
 fclose(fp);
 ```
 
-Closing the file ensures data is saved and memory resources are released.
+Closing the file ensures:
+
+* Data is saved
+* Memory resources are released
+* File is unlocked
+
+---
+
+# Important Functions Summary
+
+| Function    | Purpose               |
+| ----------- | --------------------- |
+| `fopen()`   | Opens a file          |
+| `fprintf()` | Writes formatted data |
+| `fgets()`   | Reads a line          |
+| `fscanf()`  | Reads formatted input |
+| `fclose()`  | Closes a file         |
 
 ---
 
 # 15_Preprocessor_Directives.md
 
-## Preprocessor Directives in C
+# Preprocessor Directives in C
 
-Preprocessor directives are instructions processed before compilation. They start with the `#` symbol.
+Preprocessor directives are **instructions processed before compilation**.
 
-### Common Directives
+They start with the `#` symbol.
 
-| Directive | Purpose                        |
-| --------- | ------------------------------ |
-| #include  | Includes header files          |
-| #define   | Defines constants/macros       |
-| #undef    | Removes a macro                |
-| #ifdef    | Checks if macro is defined     |
-| #ifndef   | Checks if macro is not defined |
-
----
-
-## #include
-
-Used to include header files.
+Example:
 
 ```c
 #include <stdio.h>
@@ -121,7 +252,36 @@ Used to include header files.
 
 ---
 
-## #define
+# Common Directives
+
+| Directive  | Purpose                        |
+| ---------- | ------------------------------ |
+| `#include` | Includes header files          |
+| `#define`  | Defines constants/macros       |
+| `#undef`   | Removes a macro                |
+| `#ifdef`   | Checks if macro is defined     |
+| `#ifndef`  | Checks if macro is not defined |
+
+---
+
+# #include
+
+Used to include header files.
+
+```c
+#include <stdio.h>
+```
+
+Types:
+
+```
+#include <stdio.h>   → system header
+#include "file.h"    → user defined header
+```
+
+---
+
+# #define
 
 Defines constants or macros.
 
@@ -129,7 +289,7 @@ Defines constants or macros.
 #define PI 3.14
 ```
 
-Example
+Example:
 
 ```c
 #include <stdio.h>
@@ -150,7 +310,21 @@ int main() {
 
 ---
 
-## #undef
+# Macro Example
+
+```c
+#define SQUARE(x) x*x
+```
+
+Usage:
+
+```c
+int result = SQUARE(5);
+```
+
+---
+
+# #undef
 
 Removes a defined macro.
 
@@ -161,7 +335,7 @@ Removes a defined macro.
 
 ---
 
-## #ifdef
+# #ifdef
 
 Checks if a macro is defined.
 
@@ -175,12 +349,15 @@ printf("Debug Mode Enabled");
 
 ---
 
-## #ifndef
+# #ifndef
 
-Checks if a macro is not defined.
+Checks if a macro is **not defined**.
 
 ```c
 #ifndef PI
 #define PI 3.14
 #endif
 ```
+
+Often used in **header file protection**.
+
