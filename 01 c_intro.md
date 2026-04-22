@@ -66,4 +66,54 @@ int main() {
 * Each statement ends with `;`
 * `main()` function is mandatory
 
+
 ---
+### **C Programming – Practical Questions**
+---
+
+1. Write a C program to print:
+
+```
+Hello, World!
+Welcome to C Programming
+```
+
+2. Write a C program to print your **name and age** using `printf()`.
+
+3. Write a C program to print the following pattern:
+
+```
+*****
+*****
+*****
+```
+
+4. Write a C program that contains an empty `main()` function and returns 0.
+
+5. Write a C program to display:
+
+```
+C Programming is Fun!
+```
+
+using multiple `printf()` statements.
+
+6. Write a C program with proper structure (`#include`, `main`, `return`) and print any message of your choice.
+
+7. Write a C program to print numbers from **1 to 5** using separate `printf()` statements (no loop).
+
+8. Write a C program that prints a message in **two different lines** using `\n`.
+
+9. Write a C program to print a simple triangle pattern:
+
+```
+*
+**
+***
+```
+
+10. Write a C program that shows the use of **semicolon (;)** by writing at least 3 valid statements.
+
+---
+
+If you want, I can next create **expected outputs or solutions sheet** for teaching use.
