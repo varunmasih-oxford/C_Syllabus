@@ -1,4 +1,5 @@
-# C Programming Assignment 
+# C Programming Assignment
+
 ## Topics Covered
 - Introduction to C
 - Variables, Data Types & Input/Output
@@ -48,3 +49,49 @@ Write a C program that takes an integer input and checks:
 
 ## Question 4: Simple Calculator (Menu Driven)
 Create a menu-driven calculator program:
+
+```
+
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+
+```
+
+**Requirements:**
+- Take two numbers as input  
+- Ask user to choose operation  
+- Use `if-else` or `switch`  
+- Handle division by zero  
+
+---
+
+## Question 5: Student Grade System
+Write a program to input marks of 5 subjects and calculate:
+
+- Total marks  
+- Percentage  
+- Grade based on percentage:
+
+| Percentage | Grade |
+|------------|-------|
+| ≥ 90       | A     |
+| ≥ 75       | B     |
+| ≥ 50       | C     |
+| < 50       | Fail  |
+
+**Requirements:**
+- Use input/output and operators  
+- Apply `else-if` ladder  
+- Display all results  
+
+---
+
+## Instructions
+- Write clean and properly formatted code  
+- Use meaningful variable names  
+- Add comments where necessary  
+- Test your program with different inputs  
+
+```
