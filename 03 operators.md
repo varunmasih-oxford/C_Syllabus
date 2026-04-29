@@ -38,11 +38,11 @@ printf("%d", a % b);   // Output: 1
 
 #### Logical Operators
 
-| Operator | Meaning |   |    |
-| -------- | ------- | - | -- |
-| `&&`     | AND     |   |    |
-| `        |         | ` | OR |
-| `!`      | NOT     |   |    |
+| Operator | Meaning |
+| -------- | ------- |
+| `&&`     | AND     |
+| `||`     | OR      |
+| `!`      | NOT     |
 
 ```c
 if(age > 18 && age < 60)
