@@ -4,7 +4,8 @@
 
 * Allows a program to **choose different paths**
 * Based on conditions
-**For Student Research:**
+* **For Student Research:**
+  
   **what if we do not return 0; in main function?**
   
   **why do we use break; statment**
