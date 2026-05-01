@@ -6,9 +6,9 @@
 * Based on conditions
 * **For Student Research:**
   
-  **what if we do not return 0; in main function?**
+  ->**what if we do not return 0; in main function?**
   
-  **why do we use break; statment**
+  ->**why do we use break; statment?**
   
 ---
 
