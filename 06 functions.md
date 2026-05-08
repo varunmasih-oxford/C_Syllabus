@@ -8,6 +8,36 @@
 
 ---
 
+# Function Syntax
+
+```c
+return_type function_name(parameters) {
+    // code
+}
+```
+
+### Example
+
+```c
+int add(int a, int b) {
+    return a + b;
+}
+```
+
+---
+
+# Function Call
+
+* A function executes only when it is called
+
+### Example
+
+```c
+printSum(50, 60);
+```
+
+---
+
 # Types of Functions
 
 ## 1. No Arguments, No Return Value
@@ -98,36 +128,6 @@ int main() {
 
     return 0;
 }
-```
-
----
-
-# Function Syntax
-
-```c
-return_type function_name(parameters) {
-    // code
-}
-```
-
-### Example
-
-```c
-int add(int a, int b) {
-    return a + b;
-}
-```
-
----
-
-# Function Call
-
-* A function executes only when it is called
-
-### Example
-
-```c
-printSum(50, 60);
 ```
 
 ---
