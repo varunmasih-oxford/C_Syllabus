@@ -255,3 +255,130 @@ Global: 100
 ```
 
 ---
+
+
+
+# Practical Questions – Functions and Variable Scope in C
+
+## 1. Simple Greeting Function
+
+Create a function `greet()` that prints:
+
+```text
+Welcome to C Programming
+```
+
+---
+
+## 2. Function with Arguments
+
+Create a function `displayName()` that accepts a student name and prints:
+
+```text
+Hello <name>
+```
+
+Example:
+
+```text
+Hello Rahul
+```
+
+---
+
+## 3. Addition Using Return Value
+
+Create a function `add()` that accepts two integers and returns their sum.
+
+### Sample Output
+
+```text
+Sum = 80
+```
+
+---
+
+## 4. Find Square of a Number
+
+Create a function `square()` that accepts a number and returns its square.
+
+### Example
+
+```text
+Input: 5
+Output: 25
+```
+
+---
+
+## 5. Even or Odd Using Function
+
+Write a function `checkEvenOdd()` that takes a number as input and prints whether the number is even or odd.
+
+### Example
+
+```text
+Input: 7
+Output: Odd
+```
+
+---
+
+## 6. Maximum of Two Numbers
+
+Create a function `maxNum()` that accepts two numbers and returns the larger number.
+
+### Example
+
+```text
+Input: 10 20
+Output: 20
+```
+
+---
+
+## 7. Global and Local Variable Demo
+
+Create a program using:
+
+* One global variable
+* One local variable
+
+Print both variables inside a function and inside `main()`.
+
+---
+
+## 8. Calculator Using Functions
+
+Create separate functions for:
+
+* Addition
+* Subtraction
+* Multiplication
+* Division
+
+Take two numbers from the user and display all operations.
+
+---
+
+## 9. Factorial Using Function
+
+Create a function `factorial()` that returns the factorial of a number.
+
+### Example
+
+```text
+Input: 5
+Output: 120
+```
+
+---
+
+## 10. Scope Error Observation
+
+Write a program where:
+
+* A variable is declared inside a function
+* Try accessing it outside the function
+
+Observe and explain the compiler error related to scope.
