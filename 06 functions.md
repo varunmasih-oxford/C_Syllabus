@@ -382,3 +382,171 @@ Write a program where:
 * Try accessing it outside the function
 
 Observe and explain the compiler error related to scope.
+
+
+---
+# Extra Questions
+
+# 1. No Arguments, No Return Value – Practical Questions
+
+## 1.
+Create a function `showMessage()` that prints `"Learning C Functions"`.
+
+## 2.
+Write a function `printLine()` that prints a line of stars (`**********`) five times.
+
+## 3.
+Create a function `showMenu()` that displays:
+- 1. Add
+- 2. Subtract
+- 3. Exit
+
+## 4.
+Write a function `collegeName()` that prints your college or institute name.
+
+## 5.
+Create a function `evenNumbers()` that prints all even numbers from 1 to 20.
+
+---
+
+# 2. With Arguments, No Return Value – Practical Questions
+
+## 1.
+Write a function `greet(char name[])` that prints:
+`Hello <name>`
+
+## 2.
+Create a function `printSquare(int n)` that prints the square of a number.
+
+## 3.
+Write a function `studentInfo(char name[], int age)` that displays student details.
+
+## 4.
+Create a function `table(int n)` that prints the multiplication table of a number.
+
+## 5.
+Write a function `checkEvenOdd(int n)` that checks whether a number is even or odd and prints the result.
+
+---
+
+# 3. With Arguments, With Return Value – Practical Questions
+
+## 1.
+Create a function `add(int a, int b)` that returns the sum of two numbers.
+
+## 2.
+Write a function `largest(int a, int b)` that returns the larger number.
+
+## 3.
+Create a function `cube(int n)` that returns the cube of a number.
+
+## 4.
+Write a function `isPositive(int n)` that returns `1` if positive otherwise `0`.
+
+## 5.
+Create a function `areaRectangle(int length, int breadth)` that returns the area of a rectangle.
+
+---
+
+# 4. No Arguments, With Return Value – Practical Questions
+
+## 1.
+Create a function `getNumber()` that returns `100`.
+
+## 2.
+Write a function `piValue()` that returns `3.14`.
+
+## 3.
+Create a function `currentYear()` that returns the current year.
+
+## 4.
+Write a function `getEvenNumber()` that returns any even number.
+
+## 5.
+Create a function `luckyNumber()` that returns your lucky number and print it in `main()`.
+
+---
+
+# 5. Function Call – Practical Questions
+
+## 1.
+Create a function `hello()` and call it three times from `main()`.
+
+## 2.
+Write a program where `main()` calls two different functions:
+- `showName()`
+- `showAge()`
+
+## 3.
+Create a calculator program using function calls for addition and subtraction.
+
+## 4.
+Write a program where one function calls another function internally.
+
+## 5.
+Create a menu-driven program using function calls for:
+- Area of Circle
+- Area of Rectangle
+- Area of Triangle
+
+---
+
+# 6. Global Scope – Practical Questions
+
+## 1.
+Create a global variable `companyCode` and print it inside two different functions.
+
+## 2.
+Write a program with a global variable `count = 0` and increase it inside multiple functions.
+
+## 3.
+Create a global variable `pi = 3.14` and use it to calculate the area of a circle.
+
+## 4.
+Write a program where a global variable is modified inside a function and printed in `main()`.
+
+## 5.
+Create two functions that access the same global variable `marks`.
+
+---
+
+# 7. Local Scope – Practical Questions
+
+## 1.
+Create a local variable inside a function and print it.
+
+## 2.
+Write a program where two functions use local variables with the same name but different values.
+
+## 3.
+Create a program showing that a local variable cannot be accessed outside its function.
+
+## 4.
+Write a program using an `if` block with a local variable inside the block.
+
+## 5.
+Create a function `calculate()` with local variables `a` and `b` and print their sum.
+
+---
+
+# 8. Scope-Based Mixed Programs – Practical Questions
+
+## 1.
+Create a program using both global and local variables with the same name.
+
+## 2.
+Write a program to show the difference between block scope and function scope.
+
+## 3.
+Create three functions where each function has its own local variable.
+
+## 4.
+Write a program where one function changes a global variable and another function prints it.
+
+## 5.
+Create a complete student result program using:
+- Global variable for passing marks
+- Local variables for student marks
+- Functions for calculation and display
+
+---
