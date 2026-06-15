@@ -41,7 +41,7 @@ printf("%d", a % b);   // Output: 1
 | Operator | Meaning |
 | -------- | ------- |
 | `&&`     | AND     |
-| `'||'`     | OR      |
+| `{}||`     | OR      |
 | `!`      | NOT     |
 
 ```c
