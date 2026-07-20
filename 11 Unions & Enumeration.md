@@ -37,9 +37,51 @@ int main() {
 ---
 
 ### Enumeration (`enum`)
+An **enumeration (`enum`)** is a user-defined data type that assigns names to a set of integer constants, making the code more readable.
 
-```c
-enum Day {Mon, Tue, Wed};
+
+## Example: Days of the Week
+
+```cpp
+#include <iostream>
+using namespace std;
+
+// Enumeration (enum)
+enum Day
+{
+    Mon,
+    Tue,
+    Wed
+};
+
+int main()
+{
+    Day today = Tue;
+
+    if (today == Tue)
+    {
+        cout << "Today is Tuesday" << endl;
+    }
+
+    cout << "Numeric value of Tue = " << today << endl;
+
+    return 0;
+}
 ```
 
----
+### Output
+
+```text
+Today is Tuesday
+Numeric value of Tue = 1
+```
+
+### Explanation
+
+- `enum Day` creates a new data type named `Day`.
+- `Mon`, `Tue`, and `Wed` are named constants.
+- By default:
+  - `Mon = 0`
+  - `Tue = 1`
+  - `Wed = 2`
+- The variable `today` stores one of the enumeration values, making the program more readable than using integer values directly.
