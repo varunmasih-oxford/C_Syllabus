@@ -1,4 +1,4 @@
-
+# Method 1 (standalone) :
 # C Programming Setup Using MinGW-w64
 
 **Operating System:** Windows 10 / 11  
@@ -227,7 +227,7 @@ C_Programming/
 
 #################################
 
-
+# Method 2 (using MSYS2) :
 
 # C Programming Setup on Windows
 
